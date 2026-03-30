@@ -12,6 +12,7 @@ Signal Museum turns media nostalgia into a small interactive gallery. Instead of
 - Manual exhibit switching and random browsing
 - Automatic gallery tour mode
 - Export the current frame as an image
+- Visible GitHub repo entry inside the page UI
 - Static deployment with no backend
 - Strong retro media and sci-fi visual identity
 
@@ -29,8 +30,27 @@ This project works well as:
 signal-museum/
 ├── index.html
 ├── README.md
-└── favicon.svg
+├── favicon.svg
+├── css/
+│   ├── base.css
+│   └── app.css
+├── js/
+│   ├── data.js
+│   ├── scene.js
+│   ├── ui.js
+│   └── main.js
+└── assets/
 ```
+
+## Architecture Notes
+
+- `index.html` provides the semantic shell for the exhibition page
+- `css/base.css` defines the shared base layer for controls and typography
+- `css/app.css` defines the visual exhibition layout and styling
+- `js/data.js` stores the exhibit metadata
+- `js/scene.js` contains the canvas draw logic and autoplay render loop
+- `js/ui.js` handles exhibit list rendering, toolbar behavior, and content sync
+- `js/main.js` connects UI state with rendering
 
 ## Local Preview
 
@@ -52,8 +72,12 @@ This project is static-only and can be deployed to:
 - GitHub Pages
 - Any basic static host
 
+## Repository
+
+- GitHub: <https://github.com/wanxb/signal-museum>
+
 ## Notes
 
 - No build process is required
-- Works as a single-page interactive exhibition
-- Suitable for both standalone launch and curated gallery inclusion
+- Works as a single-page interactive exhibition with a clearer internal structure
+- Refactored from a single HTML implementation into a modular static project layout

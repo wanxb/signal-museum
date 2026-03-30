@@ -1,0 +1,56 @@
+body {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(245,180,90,.1), transparent 22%),
+    radial-gradient(circle at 85% 10%, rgba(119,231,255,.12), transparent 20%),
+    linear-gradient(180deg, #1b1720, #120f14 45%, #0b0a0d);
+}
+
+.wrap { max-width: 1240px; margin: 0 auto; padding: 28px; }
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.hero h1 { margin: 8px 0 0; font-size: clamp(34px, 6vw, 68px); letter-spacing: .03em; }
+.eyebrow { color: rgba(244,239,232,.5); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+.hero p { margin: 10px 0 0; max-width: 760px; color: var(--muted); line-height: 1.85; }
+.hero-side { display: grid; gap: 12px; justify-items: start; }
+.note { color: var(--muted); font-size: 13px; }
+.panel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 26px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.28);
+}
+.grid { display: grid; grid-template-columns: 340px 1fr; gap: 18px; }
+.list { padding: 16px; display: grid; gap: 10px; align-content: start; }
+.item {
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,.03);
+  cursor: pointer;
+  transition: .2s ease;
+}
+.item:hover, .item.active {
+  border-color: var(--line);
+  background: rgba(255,255,255,.08);
+  transform: translateX(4px);
+}
+.item .meta { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.viewer { padding: 18px; display: grid; gap: 16px; }
+canvas { width: 100%; height: 320px; border-radius: 20px; border: 1px solid var(--line); background: #08090c; }
+.desc { padding: 16px; border-radius: 20px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); line-height: 1.8; }
+.desc h2 { margin: 0 0 10px; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag { padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: var(--muted); font-size: 12px; }
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .wrap { padding: 16px; }
+  .grid { grid-template-columns: 1fr; }
+}
