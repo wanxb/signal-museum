@@ -22,7 +22,7 @@ a {
 }
 
 button,
-.ghost-link {
+.icon-link {
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.05);
   color: var(--text);
@@ -34,7 +34,21 @@ button,
 }
 
 button:hover,
-.ghost-link:hover {
+.icon-link:hover {
   transform: translateY(-1px);
   background: rgba(255,255,255,.09);
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+.icon-link svg {
+  width: 20px;
+  height: 20px;
 }
